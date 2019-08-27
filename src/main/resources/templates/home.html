@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/home.css}">
+
+</head>
+
+
+<body>
+<header>
+
+   <img id="logo" src="img/Logo.png" alt="">
+
+    <div>
+
+        <h1 style="font-weight: bold; color: greenyellow; font-family: 'Noto Sans CJK TC Black';
+     display: flex; align-items: center">Green Line welcomes, <span id="welcomeField"></span>
+        </h1>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="loginForm">
+        <form >
+            <input type="email" id="email" placeholder="Введіть емейл:  ">
+            <input type="password" id="password" placeholder="Введіть пароль:  ">
+
+            <button type="button" id="btnLogin" class="btn btn-success btn-lg">Вхід</button>
+            <button type="button" id="btnRegister" class="btn btn-success btn-lg">Реєстрація</button>
+        </form>
+    </div>
+
+
+        <nav id="navbar">
+            <ol id="navbarList">
+                <li id="btnHome">Головна</li>
+                <li id="btnAllCar">Адмін</li>
+                <li id="btnPaymentAndDelivery">Оплата та доставка</li>
+                <li id="btnCar">Електроавтомобілі</li>
+                <li id="btnContact">Контакти</li>
+
+            </ol>
+        </nav>
+
+</header>
+
+<section>
+    <div id="main">
+        <div class="w3-content w3-section" style="max-width:100%">
+            <img class="mySlides" src="img/electro1.jpg" style="width:100% ">
+            <img class="mySlides" src="img/electro2.jpg" style="width:100%">
+            <img class="mySlides" src="img/electro5.jpg" style="width:100%">
+        </div>
+        <script>
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+        </script>
+
+
+
+
+
+        <div id="content">
+            <div id="advantages">
+                <h2>Переваги електромобілів</h2>
+                <div id="adv" >
+                    <ol id = listAdv>
+                        <li>Повна відсутність шкідливих для здоров'я людини вихлопів.</li>
+                        <li>Проста конструкція.</li>
+                        <li>Здатність заряджати електромобіль від звичайної розетки.</li>
+                        <li> Електрика обійдеться набагато дешевше того ж бензину або дизельного палива.</li>
+                        <li>Масове виробництво електромобілів змогло б вирішити так звану проблему «енергетичного піку» за рахунок зарядки акумуляторів в нічний час доби.</li>
+                        <li>Електромобіль не створює сильного шумового забруднення</li>
+                        <li>Висока плавність ходу, за рахунок більш високої частоти обертання валу двигуна.</li>
+
+                    </ol>
+                </div>
+
+
+            </div>
+
+            <div id="brand">
+                <h2>Марки електричних автомобілів</h2>
+                <div id="brand1">
+                    <ul class = nameBrand >
+                        <li id="btnNissan">Nissan</li>
+                        <li id="btnBMW">BMW</li>
+                        <li id="btnToyota">Toyota</li>
+                        <li id="btnTesla">TESLA</li>
+                        <li id="btnChevrolet">Chevrolet</li>
+                        <li id="btnRenault">Renault</li>
+                        <li id="btnMersedes">Mersedes-Benz</li>
+                    </ul>
+                </div>
+                <div id= "brand2">
+                    <ul class = nameBrand>
+                        <li id="btnVolkswagen">Volkswagen</li>
+                        <li id="btnFord">Ford</li>
+                        <li id="btnFiat">Fiat</li>
+                        <li id="btnKia">Kia</li>
+                        <li id="btnJaguar">Jaguar</li>
+                        <li id="btnCitroen">Citroen</li>
+                        <li id="btnPeugeot">Peugeot</li>
+                    </ul>
+
+                </div >
+                <div id = "brand3">
+                    <ul class = nameBrand>
+                        <li id="btnSmart">Smart</li>
+                        <li id="btnJAC">JAC</li>
+                        <li id="btnMitsubishi">Mitsubishi</li>
+                        <li id="btnHyundai">Hyundai</li>
+                        <li id="btnFisker">Fisker</li>
+                        <li id="btnAudi">Audi</li>
+                        <li id="btnRavon">Ravon</li>
+
+                    </ul>
+                </div>
+
+
+
+
+            </div>
+            <div id="map">
+                <h2>Карта електрозаправок</h2>
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+</section>
+
+<footer>
+
+    <div>
+
+        <h1 id="aboutSite">2019. GreenLine - Компанія з продажу електромобілів. Bohdan Renchka and Zoriana Monchyn</h1>
+    </div>
+</footer>
+
+
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/home.js}"></script>
+
+</body>
+
+</html>

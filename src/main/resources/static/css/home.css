@@ -1,0 +1,155 @@
+* {
+    margin: 0; /*щоб не було відступів*/
+    padding: 0;
+}
+
+header {
+    width: 100%; /*ширина*/
+    height: 195px; /*висота*/
+    background-color: white;
+}
+
+#logo {
+    width: 28%;
+    height: 175px;
+    padding-left: 0;
+    float: right;
+}
+
+
+#navbar {
+    width: 70%;
+    height: 20%;
+    float: left;
+    color: greenyellow;
+
+
+}
+
+#navbarList {
+    width: 100%;
+    height: 30%;
+    list-style: none; /*без нумерації*/
+    color: greenyellow;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+
+}
+
+#navbarList > li {
+    font-weight: bold;
+    float: left; /*положення крайнє ліве*/
+    margin-left: 25px; /*розсунути*/
+}
+
+#navbarList > li:hover { /*міняємоколір наводячи на елемент*/
+    cursor: pointer; /*встановлюємо курсор*/
+    color: yellow;
+    font-weight: 100;
+}
+
+#btnRegistration {
+    background-color: greenyellow;
+    color: white;
+}
+
+#main {
+    width: 100%; /*ширина*/
+    height: 1700px; /*висота*/
+    background-color: greenyellow;
+    padding-top: 70px;
+    margin: auto;
+
+}
+
+
+
+
+#advantages {
+    width: 100%; /*ширина*/
+    height: 380px; /*висота*/
+
+    background-color: greenyellow;
+
+
+}
+
+#adv {
+    width: 100%; /*ширина*/
+    height: 300px; /*висота*/
+
+    color: greenyellow;
+    text-align: justify;
+
+}
+
+#listAdv {
+    color: black;
+
+}
+
+#brand {
+    width: 100%; /*ширина*/
+    height: 580px; /*висота*/
+
+    background-color: white;
+
+}
+
+#brand1 {
+    width: 33%; /*ширина*/
+    height: 552px; /*висота*/
+
+    background-color: greenyellow;
+    float: left;
+
+}
+
+#brand2 {
+    width: 34%; /*ширина*/
+    height: 552px; /*висота*/
+    background-color: greenyellow;
+    float: left;
+
+}
+
+#brand3 {
+    width: 33%; /*ширина*/
+    height: 552px; /*висота*/
+    background-color: greenyellow;
+    float: left;
+
+}
+
+.nameBrand {
+    color: black;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.nameBrand > li:hover { /*міняємоколір наводячи на елемент*/
+    cursor: pointer; /*встановлюємо курсор*/
+    color: yellow;
+    font-weight: 100;
+}
+
+h2 {
+    text-align: center;
+    background-color: darkgreen;
+    color: lawngreen;
+
+}
+
+#aboutSite {
+    width: 100%; /*ширина*/
+    height: 40px; /*висота*/
+
+    background-color: greenyellow;
+    margin: auto;
+    color: darkgreen;
+    font-size: 20px;
+}
+
+

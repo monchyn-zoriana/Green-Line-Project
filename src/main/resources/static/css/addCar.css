@@ -1,0 +1,353 @@
+* {
+    margin: 0;/*щоб не було відступів*/
+    padding: 0;
+}
+header{
+    width: 100%;/*ширина*/
+    height: 175px;/*висота*/
+    background-color: white;
+
+
+}
+
+#logo{
+    width: 28%;
+    height: 175px;
+    padding-left: 0;
+    float: right;
+}
+#navbar{
+    width: 72%;
+    height: 50%;
+    float: right;
+    color: greenyellow;
+    margin-top: 95px;
+
+}
+#navbarList{
+    list-style: none;/*без нумерації*/
+    color: greenyellow;
+    font-size: 20px;
+
+}
+#navbarList > li {
+    font-weight: bold;
+    float: left;/*положення крайнє ліве*/
+    margin-left: 25px;/*розсунути*/
+}
+
+#navbarList > li:hover {/*міняємоколір наводячи на елемент*/
+    cursor: pointer;/*встановлюємо курсор*/
+    color: yellow;
+    font-weight: 100;
+}
+
+#btnRegistration{
+    background-color: greenyellow;
+    color: white;
+}
+
+
+
+
+
+#main{
+    width: 100%;/*ширина*/
+    height: 1700px;/*висота*/
+    background-color: greenyellow;
+    padding-top: 70px;
+
+}
+{box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+#content{
+    width: 100%;/*ширина*/
+    height: 220px;/*висота*/
+    background-color: greenyellow;
+    margin: auto;
+
+}
+
+
+
+
+#advantages{
+    width: 100%;/*ширина*/
+    height: 380px;/*висота*/
+
+    background-color: greenyellow;
+
+
+}
+#adv{
+    width: 100%;/*ширина*/
+    height: 300px;/*висота*/
+
+    color: greenyellow;
+    text-align: justify;
+
+}
+#listAdv{
+    color: black;
+
+}
+
+#brand{
+    width: 100%;/*ширина*/
+    height: 580px;/*висота*/
+
+    background-color: white;
+
+}
+#brand1{
+    width: 33%;/*ширина*/
+    height: 552px;/*висота*/
+
+    background-color: greenyellow;
+    float: left;
+
+}
+#brand2{
+    width: 34%;/*ширина*/
+    height: 552px;/*висота*/
+    background-color: greenyellow;
+    float: left;
+
+}
+#brand3{
+    width: 33%;/*ширина*/
+    height: 552px;/*висота*/
+    background-color: greenyellow;
+    float: left;
+
+}
+.nameBrand{
+    color: black;
+    text-align: center;
+    font-size:50px;
+
+}
+.nameBrand > li:hover {/*міняємоколір наводячи на елемент*/
+    cursor: pointer;/*встановлюємо курсор*/
+    color: yellow;
+    font-weight: 100;
+}
+
+h2{
+    text-align: center;
+    background-color: darkgreen;
+    color: lawngreen;
+
+}
+#aboutSite{
+    width: 100%;/*ширина*/
+    height: 40px;/*висота*/
+
+    background-color: greenyellow;
+    margin: auto;
+    color: darkgreen;
+    font-size: 20px;
+}
+
+
+/*#brand*/
+/*{*/
+/*width: 15%;!*ширина*!*/
+/*height: 40px;!*висота*!*/
+
+/*background-color: white;*/
+/*margin-left: 20px;*/
+/*color: black;*/
+/*font-size: 20px;*/
+
+
+/*}*/
+/*#year{*/
+/*width: 15%;!*ширина*!*/
+/*height: 40px;!*висота*!*/
+
+/*background-color: white;*/
+/*margin-left: 20px;*/
+/*color: black;*/
+/*font-size: 20px;*/
+
+
+/*}*/
+
+
+
+/*#priсe{*/
+/*width: 15%;!*ширина*!*/
+/*height: 40px;!*висота*!*/
+
+/*background-color: white;*/
+/*margin-left: 20px;*/
+/*color: black;*/
+/*font-size: 20px;*/
+
+
+/*}*/
+
+
+
+/*#condition{*/
+/*width: 15%;!*ширина*!*/
+/*height: 40px;!*висота*!*/
+
+/*background-color: white;*/
+/*margin-left: 20px;*/
+/*color: black;*/
+/*font-size: 20px;*/
+
+
+/*}*/
+
+/*#milleage{*/
+
+/*width: 15%;!*ширина*!*/
+/*height: 40px;!*висота*!*/
+
+/*background-color: white;*/
+/*margin-left: 20px;*/
+/*color: black;*/
+/*font-size: 20px;*/
+
+
+/*}*/
+
+
+/*#power{*/
+
+/*width: 15%;!*ширина*!*/
+/*height: 40px;!*висота*!*/
+
+/*background-color: white;*/
+/*margin-left: 20px;*/
+/*color: black;*/
+/*font-size: 20px;*/
+
+
+/*}*/
+
+
+
+/*#region{*/
+
+/*width: 15%;!*ширина*!*/
+/*height: 40px;!*висота*!*/
+
+/*background-color: white;*/
+/*margin-left: 20px;*/
+/*color: black;*/
+/*font-size: 20px;*/
+/*}*/
+
+h1{
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+table{
+    width:100%;
+    table-layout: fixed;
+}
+.tbl-header{
+    background-color: rgba(255,255,255,0.3);
+}
+.tbl-content{
+    height:300px;
+    overflow-x:auto;
+    margin-top: 0px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+    padding: 20px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+}
+td{
+    padding: 15px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    font-family: 'Roboto', sans-serif;
+}
+section{
+    margin: 50px;
+}
+
+
+/* follow me template */
+.made-with-love {
+    margin-top: 40px;
+    padding: 10px;
+    clear: left;
+    text-align: center;
+    font-size: 10px;
+    font-family: arial;
+    color: #fff;
+}
+.made-with-love i {
+    font-style: normal;
+    color: #F50057;
+    font-size: 14px;
+    position: relative;
+    top: 2px;
+}
+.made-with-love a {
+    color: #fff;
+    text-decoration: none;
+}
+.made-with-love a:hover {
+    text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+

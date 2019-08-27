@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/catalogAuto.css}">
+
+</head>
+
+
+<body>
+<header>
+
+    <h1><img id="logo" src="img/Logo.png" alt=""></h1>
+
+    <div>
+
+        <h1 style="font-weight: bold; color: greenyellow; font-family: 'Noto Sans CJK TC Black';
+     display: flex; align-items: center">Green Line welcomes, <span id="welcomeField"></span>
+        </h1>
+
+    </div>
+
+
+    <div>
+        <nav id="navbar">
+            <ol id="navbarList">
+                <li id="btnHome">Головна</li>
+                <li id="btnAllCar">Каталог автомобілів</li>
+                <li id="btnPaymentAndDelivery">Оплата та доставка</li>
+                <li id="btnContact">Контакти</li>
+
+            </ol>
+        </nav>
+    </div>
+</header>
+
+<section>
+    <div id="main">
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="brandId" name="custom_name"
+                                 placeholder="Введіть назву бренду: ">
+                          </span>
+                <span class="input-group-addon">
+
+
+        				  <button class="add btn btn-primary" type="button" id="saveBtnBrand">Додати бренд</button>
+                          </span>
+            </div>
+        </div>
+
+        <h1>Таблиця додавання брендів</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>brand</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="listOfAllBrands">
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <br>
+
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="regionId" name="custom_name"
+                                 placeholder="Введіть назву регіону: ">
+                          </span>
+                <span class="input-group-addon">
+
+
+        				  <button class="add btn btn-primary" type="button" id="saveBtnRegion">Додати регіон</button>
+                          </span>
+            </div>
+        </div>
+
+
+        <h1>Таблиця додавання регіонів</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>region</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="listOfAllRegions">
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <br>
+
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="conditionId" name="custom_name"
+                                 placeholder="Введіть  стан авто: ">
+                          </span>
+                <span class="input-group-addon">
+
+
+        				  <button class="add btn btn-primary" type="button"
+                                  id="saveBtnCondition">Додати стан авто</button>
+                          </span>
+            </div>
+        </div>
+
+
+        <h1>Таблиця додавання стану авто</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>condition</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="listOfAllConditions">
+
+                </tbody>
+            </table>
+        </div>
+
+
+        <br>
+
+
+        <div class="form-group">
+            <div class="input-group">
+
+            <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="carYear" name="custom_name"
+                                 placeholder="Введіть  рік: ">
+                          </span>
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="carPrice" name="custom_name"
+                                 placeholder="Введіть  ціну: ">
+                          </span>
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="carPower" name="custom_name"
+                                 placeholder="Введіть  потужність: ">
+                          </span>
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="carMilleage" name="custom_name"
+                                 placeholder="Введіть  пробіг: ">
+                          </span>
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="carBrand" name="custom_name"
+                                 placeholder="Введіть  бренд: ">
+                          </span>
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="carCondition" name="custom_name"
+                                 placeholder="Введіть  стан: ">
+                          </span>
+                <span class="input-group-addon">
+						  <input type="text" value="" class="form-control" id="carRegion" name="custom_name"
+                                 placeholder="Введіть  регіон: ">
+                          </span>
+                <span class="input-group-addon">
+
+
+        				  <button class="add btn btn-primary" type="button"
+                                  id="saveBtnCar">Додати електромобіль</button>
+                          </span>
+            </div>
+        </div>
+
+
+        <h1>Таблиця додавання АВТО</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Рік</th>
+                    <th>Ціна</th>
+                    <th>Потужність</th>
+                    <th>Пробіг</th>
+                    <th>Бренд</th>
+                    <th>Стан</th>
+                    <th>Регіон</th>
+                    <th>DELETE</th>
+                    <th>UPDATE</th>
+
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody id="listOfAllCars">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <br>
+
+
+
+
+
+</section>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update region</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="updateValue1">
+                <button id="doUpdate">Finish</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModalRegion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabeRegion"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabeRegion">Update region</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="updateValueRegion">
+                <button id="doUpdateRegion">Finish</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModalCondition" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabeCondition"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabeCondition">Update condition</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="updateValueCondition">
+                <button id="doUpdateCondition">Finish</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="myModalCar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabeCar"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabeCar">Update car</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="updateValueCar">
+                <button id="doUpdateCar">Finish</button>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+
+    <div>
+
+        <h1 id="aboutSite">2019. GreenLine - Компанія з продажу електромобілів. Bohdan Renchka and Zoriana Monchyn</h1>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/catalogAuto.js}"></script>
+
+</body>
+
+</html>
